@@ -288,7 +288,7 @@ eoracle_health_check{avs_name="EoracleDataValidator", name="polygon.io"} 1
 
 ### Setup the monitoring stack 
 We use [prometheus](https://prometheus.io/download) to scrape the metrics from the EO data validator container.
-Make sure to edit the [prometheus.yml](data-validator/monitoring/prometheus.yml) file, located at operator-setup/data-validator/monitoring, replacing the placeholder 'PROMETHEUS_PORT' with the actual value specified in the data validator [.env](data-validator/.env) file (PROMETHEUS_PORT)
+Make sure to edit the [prometheus.yml](data-validator/monitoring/prometheus.yml) file, located at operator-setup/data-validator/monitoring, replacing the placeholder 'EO_PROMETHEUS_PORT' with the actual value specified in the data validator [.env](data-validator/.env) file (EO_PROMETHEUS_PORT)
 ```bash
 cd operator-setup/data-validator/monitoring
 ```
