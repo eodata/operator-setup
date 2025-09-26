@@ -158,7 +158,10 @@ You may view the container logs using
 docker logs -f data-validator
 ```
 
-#### Data Validator V1 logs
+<details>
+<summary>
+Data Validator V1 logs
+</summary>
 
 The following example log messages confirm that your EO data validator software is up and running. Please ensure that your alias is declared and activated.
 
@@ -180,6 +183,8 @@ The following example log messages confirm that your EO data validator software 
 2024-04-11 22:32:17 <1> 2024-04-11T19:32:17.505Z info:  sent transaction f0bfeb6223f3bd09ef8f251bb05b3c5c81b1c02ea555c5a2846077e11c145e31 [nonce:11]  to block 267 ---<some_data> ---duration: 0.013 ---block received at 2024-04-11T19:32:17.492Z
 2024-04-11 22:32:18 <1> 2024-04-11T19:32:18.622Z info:
 ```
+
+</details>
 
 #### Data Validator V2 logs
 
@@ -239,7 +244,7 @@ git pull
 ```
 3. Merge .env changes.
 Go over `.example_env` or `.example_env_holesky` and merge new fields that do not appear in your local `.env` file.
-   - The structure of .example_env_holesky  has been changed to support data validator V2
+   - The structure of .example_env*  have been changed to support data validator V2
 
 4. Pull the latest docker images
 ```bash
@@ -283,7 +288,7 @@ eoracle_health_check{avs_name="EoracleDataValidator", name="polygon.io"} 1
 
 ### Setup the monitoring stack 
 We use [prometheus](https://prometheus.io/download) to scrape the metrics from the EO data validator container.
-Make sure to edit the [prometheus.yml](data-validator/monitoring/prometheus.yml) file, located at operator-setup/data-validator/monitoring, replacing the placeholder 'PROMETHEUS_PORT' with the actual value specified in the data validator [.env](data-validator/.env) file (PROMETHEUS_PORT)
+Make sure to edit the [prometheus.yml](data-validator/monitoring/prometheus.yml) file, located at operator-setup/data-validator/monitoring, replacing the placeholder 'EO_PROMETHEUS_PORT' with the actual value specified in the data validator [.env](data-validator/.env) file (EO_PROMETHEUS_PORT)
 ```bash
 cd operator-setup/data-validator/monitoring
 ```

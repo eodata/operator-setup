@@ -7,4 +7,4 @@ scrape_configs:
       - targets: ['node-exporter:9100']
   - job_name: 'eo-data-validator'
     static_configs:
-      - targets: ['eo-data-validator:<PROMETHEUS_PORT>']
+      - targets: ['eo-data-validator:<EO_PROMETHEUS_PORT>']
