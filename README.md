@@ -2,7 +2,7 @@
 This guide will walk you through the process of registering as an operator to EO AVS and running the EO software.
 
 ## Prerequisites
-1. **Registered Eigenlayer Operator Account:** Ensure you have a fully registered Eigenlayer operator account. If you don't have one, follow the steps in the [Eigenlayer User Guide](https://docs.eigencloud.xyz/products/eigenlayer/operators/howto/operator-installation) to create and fund your account.
+1. **Registered Eigenlayer Operator Account:** Ensure you have a fully registered Eigenlayer operator account. If you don't have one, follow the steps in the [Eigenlayer User Guide](https://docs.eigencloud.xyz/eigenlayer/operators/howto/registeroperators/operator-installation) to create and fund your account.
 
 ## Software/Hardware Requirement 
 * Operating System: linux amd x64
@@ -28,10 +28,10 @@ cp data-validator/.example_env data-validator/.env
 Copy `operator-setup/data-validator/.example_env` into `operator-setup/data-validator/.env`.  
 Edit the `operator-setup/data-validator/.env` and update the values for your setup
 
-[**NOTE**]
-If you plan to operate EO on Holesky, then copy `.example_env_holesky` instead of `.example_env`.  
+> [!NOTE]
+> If you plan to operate EO on Holesky, then copy `.example_env_holesky` instead of `.example_env`.  
 ```bash
-cp data/validator/.example_env_holesky data-validator/.env`
+cp data-validator/.example_env_holesky data-validator/.env
 ```
 
 ### Generate a BLS pair (recommended)
